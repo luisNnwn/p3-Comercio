@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#264054" />
+    <meta
+      name="description"
+      content="Presentación del lanzamiento de Diana Pro: decisión, datos, creatividad y one-pager."
+    />
+    <title>Diana Pro · Cero excusas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <button class="brand" data-go="inicio" type="button" aria-label="Diana Pro, ir al inicio">
+        <span class="brand-mark">D</span>
+        <span class="brand-name">DIANA <b>PRO</b></span>
+      </button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-link is-active" data-page="inicio" type="button">Inicio</button>
+        <button class="nav-link" data-page="datos" type="button">El reto</button>
+        <button class="nav-link" data-page="creatividad" type="button">Creatividad</button>
+        <button class="nav-link" data-page="decision" type="button">One-pager</button>
+      </nav>
+      <a class="header-download" href="./public/documents/Reto_Diana_Pro_Resuelto.xlsx" download>
+        <span aria-hidden="true">↓</span> Excel
+      </a>
+    </header>
+
+    <main>
+      <section class="page-section is-visible" id="inicio" data-section="inicio">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> LANZAMIENTO · SNACK PROTEICO</p>
+            <h1>Tu pausa.<br /><span>Más poderosa.</span></h1>
+            <p class="hero-description">
+              Diana Pro: 15 g de proteína, sabor a maní y chocolate. Horneado, no frito.
+              Una propuesta lista para acompañar tu ritmo.
+            </p>
+            <div class="hero-actions">
+              <button class="button button-primary" data-go="datos" type="button">Explorar el reto <span>↗</span></button>
+              <button class="button button-quiet" data-go="creatividad" type="button">Ver producto <span>→</span></button>
+            </div>
+            <div class="hero-proof">
+              <span class="proof-icon">15<span>g</span></span>
+              <span><b>Proteína</b><small>En cada porción</small></span>
+              <span class="proof-divider"></span>
+              <span class="proof-icon proof-bake">⌁</span>
+              <span><b>Horneado</b><small>No frito</small></span>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-blob"></div>
+            <div class="hero-tag"><span>SNACK</span><strong>PRO</strong></div>
+            <img src="./public/assets/producto.jpg" alt="Empaque de Diana Pro sabor maní y chocolate" />
+            <div class="floating-note"><span class="note-dot"></span> Energía para seguir</div>
+          </div>
+          <div class="hero-index"><span>01</span> / 04</div>
+        </div>
+        <div class="intro-strip">
+          <p>UNA IDEA QUE UNE <b>SABOR</b>, <b>PROTEÍNA</b> Y CONVENIENCIA.</p>
+          <span>Desliza para descubrir <i>↓</i></span>
+        </div>
+        <div class="overview-grid">
+          <article class="overview-card overview-data">
+            <span class="card-number">01 / DATOS</span>
+            <h2>De la hoja de cálculo<br />a una decisión clara.</h2>
+            <p>Recorre las 11 pestañas del ejercicio resuelto, con su información, casos, cálculos y respuestas.</p>
+            <button class="text-link" data-go="datos" type="button">Explorar hojas <span>↗</span></button>
+            <div class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="overview-card overview-decision">
+            <span class="card-number">02 / DECISIÓN</span>
+            <h2>Una página.<br />La decisión completa.</h2>
+            <p>Consulta el one-pager directamente en esta página, sin salir del recorrido.</p>
+            <button class="text-link" data-go="decision" type="button">Ver one-pager <span>↗</span></button>
+            <div class="decision-stamp">D<span>·</span>P</div>
+          </article>
+        </div>
+        <footer class="site-footer">
+          <span>DIANA PRO <i>·</i> CERO EXCUSAS</span>
+          <span>Concepto de lanzamiento</span>
+        </footer>
+      </section>
+
+      <section class="page-section" id="datos" data-section="datos" hidden>
+        <div class="section-heading">
+          <p class="eyebrow"><span></span> EL RETO · EJERCICIO RESUELTO</p>
+          <h1>Todos los datos.<br /><span>Una sola vista.</span></h1>
+          <p>Elige una pestaña para consultar su contenido. Las tablas conservan el orden y los valores del archivo original.</p>
+        </div>
+        <div class="workbook-panel">
+          <div class="workbook-toolbar">
+            <div>
+              <span class="workbook-label">LIBRO DE TRABAJO</span>
+              <h2>Reto Diana Pro Resuelto</h2>
+            </div>
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="sheet-search" type="search" placeholder="Buscar en esta hoja" aria-label="Buscar en esta hoja" />
+            </label>
+          </div>
+          <div class="sheet-tabs" id="sheet-tabs" role="tablist" aria-label="Hojas del libro"></div>
+          <div class="sheet-caption" id="sheet-caption" aria-live="polite"></div>
+          <div class="table-scroll" id="table-scroll"></div>
+        </div>
+        <div class="download-callout">
+          <div class="download-symbol">↓</div>
+          <div><h2>¿Quieres revisar el archivo original?</h2><p>Descarga el libro completo de Excel para consultarlo o trabajarlo.</p></div>
+          <a class="button button-dark" href="./public/documents/Reto_Diana_Pro_Resuelto.xlsx" download>Descargar Excel <span>↓</span></a>
+        </div>
+        <footer class="site-footer"><span>DIANA PRO <i>·</i> EL RETO</span><button class="footer-link" data-go="inicio" type="button">Volver al inicio ↑</button></footer>
+      </section>
+
+      <section class="page-section" id="creatividad" data-section="creatividad" hidden>
+        <div class="section-heading creative-heading">
+          <p class="eyebrow"><span></span> LA IDEA TOMA FORMA</p>
+          <h1>15 g de proteína.<br /><span>Cero excusas.</span></h1>
+          <p>Una propuesta horneada, práctica y con sabor a maní y chocolate, lista para acompañar cada pausa.</p>
+        </div>
+        <div class="creative-grid">
+          <figure class="creative-poster">
+            <img src="./public/assets/post.jpg" alt="Post de Diana Pro en un gimnasio: 15 g de proteína, cero excusas; disponible en gimnasios y tiendas de conveniencia" />
+            <figcaption><span>01</span> · POST DE LANZAMIENTO</figcaption>
+          </figure>
+          <figure class="creative-product">
+            <img src="./public/assets/producto.jpg" alt="Empaque de Diana Pro con sabor a maní y chocolate, 15 g de proteína" />
+            <figcaption><span>02</span> · EMPAQUE DEL PRODUCTO</figcaption>
+          </figure>
+        </div>
+        <div class="creative-note"><span class="note-star">✳</span><p><b>La promesa:</b> un snack proteico horneado que cabe en tu día. <span>DIANA PRO · CERO EXCUSAS</span></p></div>
+        <footer class="site-footer"><span>DIANA PRO <i>·</i> CREATIVIDAD</span><button class="footer-link" data-go="inicio" type="button">Volver al inicio ↑</button></footer>
+      </section>
+
+      <section class="page-section" id="decision" data-section="decision" hidden>
+        <div class="section-heading decision-heading">
+          <p class="eyebrow"><span></span> SÍNTESIS PARA DECIDIR</p>
+          <h1>One-pager de decisión<br /><span>Diana Pro.</span></h1>
+          <p>El documento completo, integrado aquí para que puedas consultarlo sin abrir otra pestaña.</p>
+        </div>
+        <div class="pdf-frame">
+          <div class="pdf-topline"><span><i></i> ONE-PAGER · DIANA PRO</span><span>VISOR INTEGRADO</span></div>
+          <iframe
+            src="./public/documents/one-pager-diana-pro.pdf#toolbar=0&navpanes=0&view=FitH"
+            title="One-pager de decisión de Diana Pro"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="pdf-caption">Consulta el documento desplazándote dentro del visor integrado.</p>
+        <footer class="site-footer"><span>DIANA PRO <i>·</i> ONE-PAGER</span><button class="footer-link" data-go="inicio" type="button">Volver al inicio ↑</button></footer>
+      </section>
+    </main>
+  </body>
+</html>
